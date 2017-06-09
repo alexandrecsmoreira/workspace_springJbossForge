@@ -1,0 +1,51 @@
+package br.com.casadocodigo.loja.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import br.com.casadocodigo.loja.daos.ProdutoDAO;
+import br.com.casadocodigo.loja.models.Produto;
+import br.com.casadocodigo.loja.models.TipoPreco;
+
+@Controller
+public class ProdutosController {
+
+	@Autowired
+	private ProdutoDAO produtoDao;
+	
+	
+	@Autowired
+	private ModelAndView modelAndView;
+	
+
+	@RequestMapping("/produtos/form")
+	public ModelAndView formProduto() {
+		ModelAndView modelAndView = new ModelAndView("produtos/form");
+		modelAndView.addObject("tipos", TipoPreco.values());
+
+		return modelAndView;
+	}
+
+	@RequestMapping("/produtos/lista")
+	public ModelAndView lista() {
+
+		List<Produto> produto = produtoDao.listar();
+
+		ModelAndView modelAndView = new ModelAndView("produtos/lista");
+		modelAndView.addObject("produtos", produto);
+
+		return modelAndView;
+	}
+
+	@RequestMapping("/produtos")
+	public String gravar(Produto produto) {
+
+		produtoDao.gravar(produto);
+
+		return "produtos/ok";
+	}
+}

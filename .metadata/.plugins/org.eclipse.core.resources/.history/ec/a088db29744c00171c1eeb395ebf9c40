@@ -1,0 +1,6 @@
+field.required.produto.titulo = O Campo titulo é obrigatorio
+field.required.produto.descricao = O Campo descricao é obrigatorio
+field.required.produto.paginas = O Campo pagina precisa ser maior que 0
+field.required.produto.dataLancamento = O Campo pagina precisa ser maior que 0
+typeMismatch = O tipo de dado foi inválido
+typeMismatch.produtos.numeros = Digite um valor válido. Ex: "100"

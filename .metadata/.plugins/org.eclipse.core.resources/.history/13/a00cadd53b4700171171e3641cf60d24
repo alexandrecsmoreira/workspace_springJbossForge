@@ -1,0 +1,11 @@
+package org.casadocodigo.loja.conf;
+
+import org.springframework.context.annotation.Bean;
+
+public class JPAConfiguration {
+
+	@Bean
+	public void entityManagerFactory() {
+		
+	}
+}

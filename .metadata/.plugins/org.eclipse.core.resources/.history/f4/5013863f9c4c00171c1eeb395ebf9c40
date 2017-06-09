@@ -1,0 +1,9 @@
+package br.com.casadocodigo.loja.infra;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class FileSaver {
+
+	
+}

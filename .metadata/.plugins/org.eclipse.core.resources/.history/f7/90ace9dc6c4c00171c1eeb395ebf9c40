@@ -1,0 +1,3 @@
+field.required.produto.titulo = "O Campo titulo é obrigatorio"
+field.required.produto.descricao = "O Campo descricao é obrigatorio"
+field.required.produto.paginas = "O Campo pagina precisa ser maior q 0"
